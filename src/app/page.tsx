@@ -153,15 +153,17 @@ export default function Home() {
           {selectedNoteId ? (
             <>
               <div className="editor-note-title">
-                <Button
-                  title={
-                    mobileButtonIsOpen ? t("closeSidebar") : t("openSidebar")
-                  }
-                  iconName="menu"
-                  variant="ghost"
-                  onClick={handleToggleMobileMenu}
-                  large
-                />
+                <div className="mobile-visible">
+                  <Button
+                    title={
+                      mobileButtonIsOpen ? t("closeSidebar") : t("openSidebar")
+                    }
+                    iconName="menu"
+                    variant="ghost"
+                    onClick={handleToggleMobileMenu}
+                    large
+                  />
+                </div>
                 <div style={{ width: "100%" }}>
                   <input
                     type="text"
