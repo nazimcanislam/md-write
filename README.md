@@ -3,6 +3,12 @@
     <h1 align="center">MDWrite</h1>
 </p>
 
+[![](https://img.shields.io/badge/Next-15.3.2-black)](https://nextjs.org/)
+[![](https://img.shields.io/badge/NextPWA-5.6.0-darkgray)](https://nextjs.org/)
+[![](https://img.shields.io/badge/ReactMarkdown-10.1.0-orange)](https://nextjs.org/)
+[![](https://img.shields.io/badge/TailWindCSS-4.0.0-green)](https://nextjs.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue)]()
+
 **MDWrite** is a modern, minimal, and powerful Markdown note-taking web application.  
 It supports live preview, offline access (PWA), multiple languages, and a clean, responsive interface.
 
