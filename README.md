@@ -74,10 +74,10 @@ npm start
 ## 📁 Project Structure
 
 ```text
-/app
-  /components      → Reusable components (e.g., Button)
-  /context         → Language context
-  /markdown        → Editor and preview
+src/app
+    /components      → Reusable components (e.g., Button)
+    /context         → Language context
+    /markdown        → Editor and preview
 /public
   /images          → Favicon and icons
 /styles
