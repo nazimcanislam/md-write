@@ -1,0 +1,5 @@
+.group-button {
+  display: flex;
+  border-radius: 40px;
+  border: 1px solid var(--color-primary);
+}

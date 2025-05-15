@@ -1,0 +1,20 @@
+{
+  "title": "MDWrite",
+  "newNote": "Yeni Not",
+  "newNoteDescription": "Yeni not oluşturmak için tıklayın",
+  "delete": "Sil",
+  "noNoteSelected": "Bir not seçin veya oluşturun.",
+  "noNoteCreated": "Hiç not oluşturulmadı. Yukarıdaki tuş ile oluşturabilirsiniz.",
+  "placeholder": "Markdown notunuzu buraya yazın...",
+  "untitled": "Başlıksız Not",
+  "confirmDelete": "Bu notu silmek istediğinizden emin misiniz?",
+  "autoSaved": "Otomatik kaydedildi!",
+  "selectThisNote": "Bu notu seç",
+  "editorTitlePlaceholder": "Nota başlık eklemek için buraya yazın...",
+  "searchNotes": "Not arayın...",
+  "createdAt": "Oluşturuldu",
+  "onlyNote": "Sadece not",
+  "split": "Ayrı",
+  "onlyMarkdown": "Sadece Markdown",
+  "selectOrCreateNote": "Bir not seçin veya oluşturun."
+}
