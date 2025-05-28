@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { LanguageProvider } from "../context/LanguageContext";
 
 import "./globals.css";
-import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <Head>
+      <head>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -45,9 +44,9 @@ export default function RootLayout({
           sizes="16x16"
           href="/images/favicon/favicon-16x16.png"
         />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="manifest" href="/manifest.json" />
         <meta rel="theme-color" content="#00AA55" />
-      </Head>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 dark:bg-gray-900`}
       >
