@@ -1,8 +1,7 @@
-import Button from "../button";
+import { useState } from "react";
 import { GroupButtonProps } from "./group-button.types";
 
-import "./group-button.css";
-import { useState } from "react";
+import Button from "../button";
 
 export default function GroupButton({
   buttons,
@@ -10,7 +9,7 @@ export default function GroupButton({
   setSelectedButtonNumber,
 }: GroupButtonProps) {
   const [selectedButton, setSelectedButton] = useState<number | null>(
-    selectedButtonNumber || null
+    selectedButtonNumber ?? null
   );
 
   function handleSelectButton(index: number): void {
@@ -19,15 +18,13 @@ export default function GroupButton({
   }
 
   return (
-    <div className="group-button">
+    <div className="flex rounded-full border border-primary">
       {buttons.map((button, index) => (
         <Button
           key={index}
           {...button}
           variant={index === selectedButton ? "primary" : "ghost"}
-          onClick={() => {
-            handleSelectButton(index);
-          }}
+          onClick={() => handleSelectButton(index)}
         />
       ))}
     </div>

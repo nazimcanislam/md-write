@@ -41,6 +41,10 @@
   background-color: var(--color-primary);
 }
 
+.border-primary {
+  border-color: var(--color-primary);
+}
+
 body {
   background: var(--background-primary);
   color: var(--foreground);
@@ -377,7 +381,7 @@ main aside {
     position: absolute;
     left: -100%;
     top: 0;
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
     max-width: 60%;
     width: 100%;
   }

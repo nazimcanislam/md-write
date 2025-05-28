@@ -1,0 +1,58 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* gap-2 */
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+  height: 2.5rem; /* h-10 */
+  font-size: 1rem; /* text-base */
+  border-radius: 40px;
+  transition: background-color 0.2s, color 0.2s; /* transition-colors */
+  cursor: pointer;
+}
+
+.button.large {
+  font-size: 1.25rem; /* text-xl */
+  height: 3rem; /* h-12 */
+  padding-left: 1.25rem; /* px-5 */
+  padding-right: 1.25rem;
+}
+
+.button.only-icon {
+  width: 2.5rem; /* w-10 */
+  height: 2.5rem; /* h-10 */
+  padding: 0.5rem; /* p-2 */
+  padding-left: 0; /* px-0 */
+  padding-right: 0;
+  gap: 0; /* gap-0 */
+}
+
+.button.primary {
+  background-color: var(--color-primary);
+  color: var(--color-primary--text);
+}
+
+.button.primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.button.secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.button.secondary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-primary-text);
+}
+
+.button.ghost {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.button.ghost:hover {
+  background-color: var(--color-primary-hover-ghost);
+}

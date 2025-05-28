@@ -1,13 +1,23 @@
-import { Note } from '../types/note';
+import { Note } from "../types/note";
 
-export const STORAGE_KEY = 'mdwrite-notes';
+export const NOTES_STORAGE_KEY: string = "mdwrite-notes";
+export const LAST_SELECTED_NOTE_UID_KEY: string = "mdwrite-last-note-uid";
 
 export function getNotes(): Note[] {
-  if (typeof window === 'undefined') return [];
-  const raw = localStorage.getItem(STORAGE_KEY);
+  if (typeof window === "undefined") return [];
+  const raw = localStorage.getItem(NOTES_STORAGE_KEY);
   return raw ? JSON.parse(raw) : [];
 }
 
 export function saveNotes(notes: Note[]) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(notes));
+  localStorage.setItem(NOTES_STORAGE_KEY, JSON.stringify(notes));
+}
+
+export function selectLastNote(lastNoteId: string | null): void {
+  if (!lastNoteId) {
+    localStorage.removeItem(LAST_SELECTED_NOTE_UID_KEY);
+    return;
+  }
+
+  localStorage.setItem(LAST_SELECTED_NOTE_UID_KEY, lastNoteId);
 }

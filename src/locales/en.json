@@ -16,5 +16,6 @@
   "onlyNote": "Only note",
   "split": "Split",
   "onlyMarkdown": "Only Markdown",
-  "selectOrCreateNote": "Select a note or create it."
+  "selectOrCreateNote": "Select a note or create it.",
+  "closeMenu": "Close menu"
 }

@@ -5,7 +5,8 @@ import en from "../locales/en.json";
 import tr from "../locales/tr.json";
 
 const translations = { en, tr };
-type Language = "en" | "tr";
+
+export type Language = "en" | "tr";
 
 interface LangContextType {
   lang: Language;

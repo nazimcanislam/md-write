@@ -16,5 +16,6 @@
   "onlyNote": "Sadece not",
   "split": "Ayrı",
   "onlyMarkdown": "Sadece Markdown",
-  "selectOrCreateNote": "Bir not seçin veya oluşturun."
+  "selectOrCreateNote": "Bir not seçin veya oluşturun.",
+  "closeMenu": "Menüyü kapat"
 }
