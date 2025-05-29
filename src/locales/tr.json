@@ -17,5 +17,7 @@
   "split": "Ayrı",
   "onlyMarkdown": "Sadece Markdown",
   "selectOrCreateNote": "Bir not seçin veya oluşturun.",
-  "closeMenu": "Menüyü kapat"
+  "closeMenu": "Menüyü kapat",
+  "saving": "Kaydediliyor...",
+  "saved": "Kaydedildi"
 }

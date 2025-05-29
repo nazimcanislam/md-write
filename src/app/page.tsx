@@ -6,10 +6,11 @@ import { Note } from "./types/note";
 import classNames from "classnames";
 import Editor from "./components/layout/editor";
 import Sidebar from "./components/layout/sidebar";
+import { getNotes } from "./utils/storage";
 
 export default function Home() {
   const [mobileButtonIsOpen, setMobileButtonIsOpen] = useState(false);
-  const [notes, setNotes] = useState<Note[]>([]);
+  const [notes, setNotes] = useState<Note[]>(getNotes());
   const [selectedNoteId, setSelectedNoteId] = useState<string | null>(null);
 
   return (

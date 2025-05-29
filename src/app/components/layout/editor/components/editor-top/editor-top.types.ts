@@ -13,4 +13,7 @@ export interface EditorTopProps {
   selectedViewNumber: number;
   setSelectedViewNumber: Dispatch<SetStateAction<number>>;
   selectedView: SelectView;
+  noteStatus: NoteStatus;
 }
+
+export type NoteStatus = "idle" | "saving" | "saved" | "failed";

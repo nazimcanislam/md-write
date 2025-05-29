@@ -10,6 +10,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { NoteStatus } from "../components/editor-top/editor-top.types";
 
 interface UseLoadEditorProps {
   notes: Note[];
@@ -27,6 +28,7 @@ export function useLoadEditor({
 
   const [selectedViewNumber, setSelectedViewNumber] = useState<number>(1);
   const [selectedView, setSelectedView] = useState<SelectView>("split");
+  const [noteStatus, setNoteStatus] = useState<NoteStatus>("idle");
 
   const selectedNote = useMemo(
     () => notes.find((note) => note.id === selectedNoteId),
@@ -34,17 +36,28 @@ export function useLoadEditor({
   );
 
   useEffect(() => {
+    setNoteStatus("idle");
+  }, [selectedNote]);
+
+  useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;
       return;
     }
+    console.log("zaaaaaaaa");
+
+    setNoteStatus("saving");
     const timer = setTimeout(() => {
       if (notes.length > 0) {
         saveNotes(notes);
+        setNoteStatus("saved");
         console.log(t("autoSaved"));
       }
     }, 3000);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      setNoteStatus("idle");
+    };
   }, [notes, t]);
 
   useEffect(() => {
@@ -69,5 +82,6 @@ export function useLoadEditor({
     selectedViewNumber,
     setSelectedViewNumber,
     selectedView,
+    noteStatus,
   };
 }

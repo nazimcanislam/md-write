@@ -10,6 +10,7 @@ export default function Editor(props: EditorProps) {
     selectedViewNumber,
     setSelectedViewNumber,
     selectedView,
+    noteStatus,
   } = useLoadEditor({ ...props });
 
   return (
@@ -21,6 +22,7 @@ export default function Editor(props: EditorProps) {
             selectedView={selectedView}
             selectedViewNumber={selectedViewNumber}
             setSelectedViewNumber={setSelectedViewNumber}
+            noteStatus={noteStatus}
             {...props}
           />
         ) : (

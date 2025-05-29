@@ -76,8 +76,8 @@ export default function SidebarHeader({
           onClick={handleCreateNote}
         />
 
-        {notes.length > 0 && (
-          <div className="mt-4" style={{ position: "relative" }}>
+        {notes && notes.length > 0 && (
+          <div className="mt-4 relative">
             <input
               type="text"
               placeholder={t("searchNotes")}

@@ -17,5 +17,7 @@
   "split": "Split",
   "onlyMarkdown": "Only Markdown",
   "selectOrCreateNote": "Select a note or create it.",
-  "closeMenu": "Close menu"
+  "closeMenu": "Close menu",
+  "saving": "Saving...",
+  "saved": "Saved"
 }

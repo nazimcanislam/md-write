@@ -19,6 +19,7 @@ export default function EditorTop({
   selectedViewNumber,
   setSelectedViewNumber,
   selectedView,
+  noteStatus,
 }: EditorTopProps) {
   const { t, lang } = useLang();
 
@@ -120,9 +121,17 @@ export default function EditorTop({
             placeholder={t("editorTitlePlaceholder")}
             onChange={(e) => updateSelectedNote("title", e.target.value)}
           />
-          <p style={{ color: "var(--color-text-muted)" }}>
-            {t("createdAt")}: {formatCreatedAt(selectedNote.createdAt)}
-          </p>
+          <div className="flex gap-4">
+            <p style={{ color: "var(--color-text-muted)" }}>
+              {t("createdAt")}: {formatCreatedAt(selectedNote.createdAt)}
+            </p>
+
+            {noteStatus !== "idle" && (
+              <p style={{ color: "var(--color-text-muted)" }}>
+                {t(noteStatus)}
+              </p>
+            )}
+          </div>
         </div>
 
         <div className="flex gap-2">

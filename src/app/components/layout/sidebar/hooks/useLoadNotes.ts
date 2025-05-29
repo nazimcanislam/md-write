@@ -13,7 +13,6 @@ export function useLoadNotes({
 }: UseLoadNotesProps) {
   useEffect(() => {
     const storedNotes = getNotes();
-    setNotes(storedNotes);
 
     const lastSelectedId: string | null = localStorage.getItem(
       LAST_SELECTED_NOTE_UID_KEY
